@@ -2,7 +2,8 @@
 
 ##1) Firstly include the maps API like so:
 
-`<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.6&sensor=false&callback=initialize&key=XXX"></script>`
+> <script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?v=3.6&sensor=false&callback=initialize&key=XXX"></script>
+
 You will also need JQuery installed on the page
 
 You can get an API key like so:
@@ -14,32 +15,35 @@ https://developers.google.com/maps/documentation/javascript/tutorial#api_key
 
 Example HTML for the page to create a map:
 
-`<div class="quickGoogleMap" id="contactGoogleMap"
-data-address="ADDRESS HERE"
-data-show-marker="1"
-data-marker-lat="52.440983"
-data-market-long="-1.865927"
-data-type="ROADMAP"
-data-zoom="13"></div>`
+> <div class="quickGoogleMap" id="contactGoogleMap"
+> data-address="ADDRESS HERE"
+> data-show-marker="1"
+> data-marker-lat="52.440983"
+> data-market-long="-1.865927"
+> data-type="ROADMAP"
+> data-zoom="13"></div>
+
 Minimum setup example (simplest implementation)
 
-`<div class="quickGoogleMap" id="contactGoogleMap" data-address="ADDRESS HERE"></div>`
+> <div class="quickGoogleMap" id="contactGoogleMap" data-address="ADDRESS HERE"></div>
 Info window examples:
 
 with info window on map pin click:
 
-`<div class="quickGoogleMap" id="contactGoogleMap" data-address="ADDRESS HERE">
-<h2>My info window title</h2>
-<p>Some info window text</p>
-</div>`
+> <div class="quickGoogleMap" id="contactGoogleMap" data-address="ADDRESS HERE">
+> <h2>My info window title</h2>
+> <p>Some info window text</p>
+> </div>
+
 Auto show the info window without pin click:
 
-`<div class="quickGoogleMap" id="contactGoogleMap"
-data-address="ADDRESS HERE"
-data-auto-show-infowindow="1" >
-<h2>My inf window title</h2>
-<p>Some info window text</p>
-</div>`
+> <div class="quickGoogleMap" id="contactGoogleMap"
+> data-address="ADDRESS HERE"
+> data-auto-show-infowindow="1" >
+> <h2>My inf window title</h2>
+> <p>Some info window text</p>
+> </div>
+
 ## 4) Make sure you have set the height and width of the map container div so that the map will display ok.
 
 Data Fields Explained
