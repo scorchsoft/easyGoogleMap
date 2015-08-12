@@ -30,18 +30,18 @@ Info window examples:
 
 with info window on map pin click:
 
-> `<div class="quickGoogleMap" id="contactGoogleMap" data-address="ADDRESS HERE">
-> <h2>My info window title</h2>
-> <p>Some info window text</p>`
-> </div>
+> `<div class="quickGoogleMap" id="contactGoogleMap" data-address="ADDRESS HERE">`
+> `<h2>My info window title</h2>`
+> `<p>Some info window text</p>`
+> `</div>`
 
 Auto show the info window without pin click:
 
-> `<div class="quickGoogleMap" id="contactGoogleMap"
-> data-address="ADDRESS HERE"
-> data-auto-show-infowindow="1" >
-> <h2>My inf window title</h2>
-> <p>Some info window text</p>`
+> `<div class="quickGoogleMap" id="contactGoogleMap"`
+> `data-address="ADDRESS HERE"`
+> `data-auto-show-infowindow="1" >`
+> `<h2>My inf window title</h2>`
+> `<p>Some info window text</p>`
 > </div>
 
 ## 4) Make sure you have set the height and width of the map container div so that the map will display ok.
