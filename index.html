@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>easyGoogleMap Example</title>
+
+
+    <script type="text/javascript" src="lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="js/easyGoogleMap.js"></script>
+    <!-- see foot for Google map api script tag -->
+
+    <style>
+        * {font-family: Arial, san-serif}
+        code {color: #1c28ff; margin-left:50px; display:block;}
+        ul li {padding-bottom:10px;}
+        ul li strong {display:block;}
+
+        #contactGoogleMap {width:100%; height:400px; margin:20px 0;}
+    </style>
+</head>
+<body>
+
+<h1>Working Demo:</h1>
+
+<div 	class="quickGoogleMap" id="contactGoogleMap"
+        data-address="NN11 4DH"
+        data-show-marker="1"
+        data-auto-show-infowindow="1"
+        data-type="ROADMAP"
+        data-zoom="14">
+    <h3>Info window</h3>
+    <p>example</p>
+</div>
+
+<h1>Setup Steps</h1>
+
+<p><strong>1) Firstly include the maps API like so:</strong></p>
+<code>&#x3C;script type=&#x27;text/javascript&#x27; src=&#x22;https://maps.googleapis.com/maps/api/js?v=3.6&#x26;sensor=false&#x26;callback=initialize&#x26;key=XXX&#x22;&#x3E;&#x3C;/script&#x3E;</code>
+<p>You will also need JQuery installed on the page</p>
+
+<p>You can get an API key like so:<br />
+<a href="https://developers.google.com/maps/documentation/javascript/tutorial#api_key">https://developers.google.com/maps/documentation/javascript/tutorial#api_key</a></p>
+
+<p><strong>2)Include this script on any pages you would like a map on</strong></p>
+
+<p><strong>3) Put HTML onto the page to set the map address and marker.</strong></p>
+<p>Example HTML for the page to create a map:</p>
+
+<code>
+    &#x3C;div class=&#x22;quickGoogleMap&#x22; id=&#x22;contactGoogleMap&#x22;<br />
+    data-address=&#x22;ADDRESS HERE&#x22;<br />
+    data-show-marker=&#x22;1&#x22;<br />
+    data-marker-lat=&#x22;52.440983&#x22;<br />
+    data-market-long=&#x22;-1.865927&#x22;<br />
+    data-type=&#x22;ROADMAP&#x22;<br />
+    data-zoom=&#x22;13&#x22;&#x3E;&#x3C;/div&#x3E;
+</code>
+
+<p> Minimum setup example (simplest implementation)</p>
+<code>
+    &#x3C;div class=&#x22;quickGoogleMap&#x22; id=&#x22;contactGoogleMap&#x22; data-address=&#x22;ADDRESS HERE&#x22;&#x3E;&#x3C;/div&#x3E;
+</code>
+
+<p>Info window examples:</p>
+
+<p>with info window on map pin click:</p>
+<code>
+    &#x3C;div class=&#x22;quickGoogleMap&#x22; id=&#x22;contactGoogleMap&#x22; data-address=&#x22;ADDRESS HERE&#x22;&#x3E;<br />
+    &#x3C;h2&#x3E;My info window title&#x3C;/h2&#x3E;<br />
+    &#x3C;p&#x3E;Some info window text&#x3C;/p&#x3E;<br />
+    &#x3C;/div&#x3E;
+</code>
+
+
+
+<p>Auto show the info window without pin click:</p>
+<code>
+    &#x3C;div class=&#x22;quickGoogleMap&#x22; id=&#x22;contactGoogleMap&#x22;<br />
+    data-address=&#x22;ADDRESS HERE&#x22;<br />
+    data-auto-show-infowindow=&#x22;1&#x22; &#x3E;<br />
+    &#x3C;h2&#x3E;My inf window title&#x3C;/h2&#x3E;<br />
+    &#x3C;p&#x3E;Some info window text&#x3C;/p&#x3E;<br />
+    &#x3C;/div&#x3E;
+</code>
+
+<p><strong>4) Make sure you have set the height and width of the map container div so that
+the map will display ok.</strong></p>
+
+<h2>Data Fields Explained </h2>
+
+
+<ul>
+    <li><strong>data-address</strong>
+    The postal data address that the map is to center on
+
+    <li><strong>data-show-marker</strong>
+    1 or 0. Set to determine if a map pin is to be displayed
+    or not</li>
+
+    <li><strong>data-marker-lat & data-marker-long</strong>
+    If you would like the marker to go on a different location
+    than the map address then you can define it here.</li>
+
+    <li><strong>data-type</strong>
+    The style of map to display. Options:
+    ROADMAP, SATELLITE, HYBRID, TERRAIN</li>
+
+    <li><strong>data-zoom</strong>
+    How far to zoom in on the map. Set between 1 and 14</li>
+
+    <li><strong>data-auto-show-infowindow</strong>
+    1 or 0. If you have set html for an info window popup then you
+    can use this to display the popup right away without the need for
+    the map pin to be clicked.</li>
+
+</ul>
+
+<!-- Google map API code should be included in page foot -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.6&sensor=false&callback=initialize"></script>
+
+</body>
+</html>
